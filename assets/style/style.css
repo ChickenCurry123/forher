@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+* {
+  font-family: "Fredoka", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('/assets/img/bg1.jpg'); /* ganti dengan gambar bunga kamu */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay gelap */
+  z-index: -1;
+}
+
+.body {
+  background-color: rgba(255, 255, 255, 0.1); /* transparan tipis */
+  backdrop-filter: blur(5px); /* efek kaca */
+  border-radius: 30px;
+  width: 90%;
+  max-width: 450px;
+  margin: 5vh auto;
+  padding: 30px 20px;
+  text-align: center;
+  min-height: 80vh;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+#waktu {
+  margin-top: 2rem;
+}
+
+#waktu h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#waktu p {
+  color: white;
+  font-size: 18px;
+}
+
+.messege-box {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transform: translateX(-100vw);
+  transition: 500ms all ease;
+}
+
+.notif-wa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.left-header img {
+  width: 25px;
+  height: auto;
+}
+
+.left-header p {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.right-header p {
+  font-size: 12px;
+  color: #555;
+}
+
+.content {
+  margin-top: 0.5rem;
+}
+
+.content .nama h2 {
+  font-size: 14px;
+  color: #222;
+}
+
+.content .pesan p {
+  font-size: 15px;
+  color: #333;
+}
+
+#button {
+  margin-top: 2rem;
+}
+
+#button button {
+  font-size: 18px;
+  font-family: 'Fredoka', sans-serif;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 8px 18px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #ffffffd9;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#button button:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+}
+
+#button button.hilang2 {
+  background-color: rgb(19, 138, 54);
+  color: white;
+}
+
+.goyang {
+  animation: goyang 1200ms infinite ease;
+}
+
+@keyframes goyang {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.kelip {
+  animation: kelip 1200ms infinite ease;
+}
+
+@keyframes kelip {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.muncul {
+  animation: muncul 1200ms ease;
+}
+
+@keyframes muncul {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hilang {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .body {
+    width: 450px;
+  }
+}
